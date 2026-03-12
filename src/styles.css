@@ -1,3 +1,43 @@
+/* montserrat font from google font */
+@import url("https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  background-color: aqua;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Iosevka Charon Mono", monospace;
+}
+header {
+  width: 100vw;
+  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgb(0, 154, 154);
+}
+.navigation-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header h1 {
+  text-align: center;
+  color: #fff;
+}
+.navigation-link {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 50px;
+}
+.navigation-link li {
+  border: 1px solid #ffffff;
+  padding: 16px 38px 16px 38px;
+  place-self: center;
+}
+.navigation-link li:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.navigation-link li a {
+  text-decoration: none;
+  color: #fff;
 }

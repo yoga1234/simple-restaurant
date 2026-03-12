@@ -16,6 +16,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+      favicon: "./src/img/favicon.ico",
     }),
   ],
   module: {
