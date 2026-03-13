@@ -1,4 +1,5 @@
 import "./styles.css";
+import "./pageStyles/homeStyle.css";
 import { aboutData } from "./pages/about.js";
 import { homeData } from "./pages/home.js";
 import { menuData } from "./pages/menu.js";
