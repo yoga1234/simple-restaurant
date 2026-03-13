@@ -1,30 +1,32 @@
 import "./styles.css";
+import { aboutData } from "./pages/about.js";
+import { homeData } from "./pages/home.js";
+import { menuData } from "./pages/menu.js";
+import { samePageBehaviour } from "./behaviour.js";
 
 // menu related section
-let currentPage = "None";
+let currentPage = "Home";
 
 // generating content
 const content = document.getElementById("main-content");
-
-const paragraph = document.createElement("p");
-paragraph.textContent = "Testing generating content using webpack";
-
-content.appendChild(paragraph);
 
 // create event for menu click and change the content base on menu
 const menuButtons = document.getElementsByClassName("menu-link");
 
 // function for menu button
 const menuClickEvent = (e) => {
+  samePageBehaviour();
+
+  // changing the page location
+  currentPage = e.target.innerText;
+
   // menu changing using object mapping
   const pages = {
-    None: renderHome,
     Home: renderHome,
     Menu: renderMenu,
     About: renderAbout,
   };
 
-  currentPage = e.target.innerText;
   pages[currentPage]?.();
 };
 
@@ -35,14 +37,14 @@ for (var i = 0; i < menuButtons.length; i++) {
 
 // functions for rendering content
 const renderHome = () => {
-  content.innerHTML = "<h1>Ini adalah renderHome</h1>";
+  content.innerHTML = homeData();
 };
 const renderMenu = () => {
-  content.innerHTML = "<h1>Ini adalah renderMenu</h1>";
+  content.innerHTML = menuData();
 };
 const renderAbout = () => {
-  content.innerHTML = "<h1>Ini adalah renderAbout</h1>";
+  content.innerHTML = aboutData();
 };
 
 // rendering home for the first time
-renderHome();
+// renderHome();
