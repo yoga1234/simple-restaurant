@@ -17,7 +17,7 @@ const menuButtons = document.getElementsByClassName("menu-link");
 
 // function for menu button
 const menuClickEvent = (e) => {
-  samePageBehaviour();
+  samePageBehaviour(currentPage, e);
 
   // changing the page location
   currentPage = e.target.innerText;
