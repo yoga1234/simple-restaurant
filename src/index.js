@@ -1,5 +1,6 @@
 import "./styles.css";
 import "./pageStyles/homeStyle.css";
+import "./pageStyles/menuStyle.css";
 import "./pageStyles/aboutStyle.css";
 import { aboutData } from "./pages/about.js";
 import { homeData } from "./pages/home.js";
@@ -49,4 +50,4 @@ const renderAbout = () => {
 };
 
 // rendering home for the first time
-// renderHome();
+renderHome();
